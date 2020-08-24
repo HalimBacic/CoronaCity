@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="523.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="etf.pj2.cc.simulation.ControlerControlGUI">
+   <children>
+      <VBox layoutX="27.0" layoutY="135.0" prefHeight="105.0" prefWidth="472.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="475.0">
+               <children>
+                  <TextField fx:id="tfInformation" editable="false" prefHeight="67.0" prefWidth="236.0" text="0">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfRecovered" editable="false" prefHeight="67.0" prefWidth="237.0" text="0">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Pane prefHeight="62.0" prefWidth="472.0">
+               <children>
+                  <Label layoutX="38.0" layoutY="-4.0" prefHeight="40.0" prefWidth="145.0" text="Infected">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="270.0" layoutY="5.0" text="Recovered">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="60.0" layoutY="250.0" prefHeight="67.0" prefWidth="406.0">
+         <children>
+            <Button fx:id="btnEnableMoving" mnemonicParsing="false" onAction="#enableMoving" prefHeight="67.0" prefWidth="106.0" text="ENABLE MOVING" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnStopSimulation" mnemonicParsing="false" onAction="#stopSimulation" prefHeight="67.0" prefWidth="101.0" text="STOP SIMULATION" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnStartAgain" mnemonicParsing="false" onAction="#startAgain" onMouseClicked="#startAgain" prefHeight="67.0" prefWidth="103.0" text="START AGAIN" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#exitSimulation" onMouseClicked="#exitSimulation" prefHeight="67.0" prefWidth="105.0" text="EXIT" />
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </HBox>
+      <HBox layoutX="60.0" layoutY="323.0" prefHeight="83.0" prefWidth="406.0">
+         <children>
+            <Button fx:id="btnSendAmbulance" mnemonicParsing="false" onAction="#sendAmbulanceCar" prefHeight="78.0" prefWidth="130.0" text="SEND AMBULANCE" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnViewAmbulance" mnemonicParsing="false" onAction="#viewAmbulance" prefHeight="78.0" prefWidth="148.0" text="VIEW AMBULANCE" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnViewStatistics" mnemonicParsing="false" onAction="#viewStatistic" prefHeight="78.0" prefWidth="143.0" text="VIEW STATISTICS" wrapText="true" />
+         </children>
+      </HBox>
+      <TextField fx:id="tfAI" editable="false" layoutX="60.0" layoutY="421.0" prefHeight="67.0" prefWidth="406.0" style="-fx-background-color: #e6dec8; -fx-border-width: 2px; -fx-border-color: #000000;" text=" Alarm Info">
+         <font>
+            <Font name="DejaVu Sans Bold" size="24.0" />
+         </font>
+      </TextField>
+      <Text fx:id="tfIndicator" fill="RED" layoutX="35.0" layoutY="115.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.8" text="Stopped" wrappingWidth="161.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

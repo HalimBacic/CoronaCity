@@ -1,0 +1,1 @@
+package etf.pj2.cc.exceptions;
